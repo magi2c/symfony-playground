@@ -24,9 +24,7 @@ class CustomerCommandTest extends WebTestCase
 
         $this->service = static::$kernel->getContainer()->get('customer.use_case.customer');
     }
-    /**
-     * @group unit
-     */
+
     public function testShouldCreatedUser()
     {
         $customer = $this->service->create(
@@ -38,5 +36,22 @@ class CustomerCommandTest extends WebTestCase
         );
 
         $this->assertEquals($customer->email(), 'test@test.com');
+    }
+
+    public function testShouldThrowExceptionWhenCreatedUserWithInvalidCommand()
+    {
+        $this->markTestIncomplete('ToDo validate request');
+
+        $this->expectException(InvalidCommandException::class);
+
+        $this->expectExceptionMessageRegExp('~with 4 violation~');
+
+        $this->service->handle(
+            new CreateCustomerCommand(
+                'invalid',
+                '',
+                null
+            )
+        );
     }
 }

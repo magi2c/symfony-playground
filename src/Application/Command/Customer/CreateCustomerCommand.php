@@ -31,11 +31,8 @@ class CreateCustomerCommand
      * @param string $firstName
      * @param string $lastName
      */
-    public function __construct(
-        string $email,
-        string $firstName,
-        string $lastName
-    ) {
+    public function __construct($email, $firstName, $lastName)
+    {
         $this->email = $email;
         $this->firstName = $firstName;
         $this->lastName = $lastName;

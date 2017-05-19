@@ -1,0 +1,12 @@
+Application\Command\Customer\CreateCustomerCommand:
+    properties:
+        email:
+            - Email:
+            - NotBlank:
+            - NotNull:
+        firstName:
+            - NotBlank:
+            - NotNull:
+        lastName:
+            - NotBlank:
+            - NotNull:

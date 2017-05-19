@@ -33,6 +33,8 @@ class CustomerCommand
      */
     public function create(CreateCustomerRequest $request): Customer
     {
+        //Todo Validator, add service....
+
         $customer = $request->toModel();
 
         //ToDo could not find driver
