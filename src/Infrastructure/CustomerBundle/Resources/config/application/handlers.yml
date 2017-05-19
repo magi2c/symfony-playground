@@ -1,0 +1,7 @@
+services:
+    customer.handler.create_customer:
+        class: Application\Command\Customer\CreateCustomer
+        arguments:
+          - '@customer.repository.customer'
+        tags:
+            - { name: tactician.handler, command: Application\Command\Customer\CreateCustomerCommand }

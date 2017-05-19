@@ -16,6 +16,9 @@ RUN apt-key adv --keyserver keys.gnupg.net --recv-keys 7E3F070089DF5277 \
     zip \
     unzip \
     php7.0-zip \
+    php7.0-curl \
+    php7.0-gd \
+    php7.0-mysql \
     php7.0-xdebug \
     php7.0-xml \
     git-all \

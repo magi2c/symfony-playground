@@ -1,0 +1,6 @@
+services:
+    customer.repository.customer:
+        class: Doctrine\ORM\EntityRepository
+        factory: ['@doctrine.orm.default_entity_manager', getRepository]
+        arguments:
+            - Domain\Customer\Model\Customer
