@@ -8,10 +8,10 @@ use League\Tactician\CommandBus;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
- * Class CustomerCommandTest
+ * Class CreateCustomerCommandTest
  * @package Tests\Application\UseCase\Customer
  */
-class CustomerCommandTest extends WebTestCase
+class CreateCustomerCommandTest extends WebTestCase
 {
     /** @var  CommandBus*/
     protected $commandbus;

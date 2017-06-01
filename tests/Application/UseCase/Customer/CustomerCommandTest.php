@@ -4,13 +4,13 @@ namespace Tests\Application\UseCase\Customer;
 
 use Application\UseCase\Customer\CustomerCommand;
 use Application\UseCase\Customer\Request\CreateCustomerRequest;
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Tests\TestCase;
 
 /**
  * Class CustomerCommandTest
  * @package Tests\Application\UseCase\Customer
  */
-class CustomerCommandTest extends WebTestCase
+class CustomerCommandTest extends TestCase
 {
     /** @var  CustomerCommand */
     protected $service;

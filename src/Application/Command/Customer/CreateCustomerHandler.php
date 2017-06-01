@@ -6,10 +6,10 @@ use Domain\Customer\Model\Customer;
 use Domain\Customer\Repository\CustomerRepositoryInterface;
 
 /**
- * Class CreateCustomer
+ * Class CreateCustomerHandler
  * @package Application\Command\Customer
  */
-class CreateCustomer
+class CreateCustomerHandler
 {
     /**
      * @var CustomerRepositoryInterface
@@ -34,8 +34,7 @@ class CreateCustomer
     {
         $customer = $command->toModel();
 
-        //ToDo could not find driver
-        //$this->repository->store($customer);
+        $this->repository->store($customer);
 
         return $customer;
     }
