@@ -56,13 +56,6 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
-        mappings:
-            Geolocation:
-                type: xml
-                prefix: Domain\Customer\Model
-                dir: '%kernel.root_dir%/../src/Infrastructure/CustomerBundle/Resources/config/persistence/Model'
-                is_bundle: false
-
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"

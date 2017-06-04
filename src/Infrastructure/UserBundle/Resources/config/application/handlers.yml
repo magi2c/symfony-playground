@@ -1,0 +1,5 @@
+services:
+    user.handler.login:
+        class: Application\User\LoginHandler
+        tags:
+            - { name: tactician.handler, command: Application\User\LoginCommand }

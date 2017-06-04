@@ -17,8 +17,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new League\Tactician\Bundle\TacticianBundle(),
 
-            new \UI\AppBundle\AppBundle(),
-            new \Infrastructure\CustomerBundle\InfrastructureCustomerBundle()
+            new \Infrastructure\UserBundle\InfrastructureUserBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
