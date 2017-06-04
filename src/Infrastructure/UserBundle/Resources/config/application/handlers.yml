@@ -1,5 +1,7 @@
 services:
     user.handler.login:
         class: Application\User\LoginHandler
+        arguments:
+                  - '@user.repository.user'
         tags:
             - { name: tactician.handler, command: Application\User\LoginCommand }
