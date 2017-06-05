@@ -36,7 +36,7 @@ class EncodedPassword implements EncodedPasswordInterface
     }
 
     /**
-     * @param string|null $plainPassword
+     * @param string $plainPassword
      * @throws InvalidPasswordException
      */
     private function validate(string $plainPassword)
