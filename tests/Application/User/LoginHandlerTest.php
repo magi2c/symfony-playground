@@ -44,28 +44,24 @@ class LoginHandlerTest extends WebTestCase
     {
         $this->expectException(UserNotFoundException::class);
 
-        $logged = $this->commandbus->handle(
+        $this->commandbus->handle(
             new LoginCommand(
                 'not_found@test.com',
                 '123456'
             )
         );
-
-        $this->assertTrue($logged);
     }
 
     public function testShouldReturnThatPasswordNotValid()
     {
         $this->expectException(UserInvalidPasswordException::class);
 
-        $logged = $this->commandbus->handle(
+        $this->commandbus->handle(
             new LoginCommand(
                 'test@test.com',
                 '111111'
             )
         );
-
-        $this->assertTrue($logged);
     }
 
 }
