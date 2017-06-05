@@ -20,7 +20,7 @@ class ChangePasswordHandlerTest extends WebTestCase
         $this->markTestIncomplete('Pending implementation');
 
         $command = new ChangePasswordCommand(
-            'not_found@test.com',
+            'test@test.com',
             '123456',
             '654321'
         );
