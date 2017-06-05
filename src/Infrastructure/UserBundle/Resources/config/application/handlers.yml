@@ -2,6 +2,11 @@ services:
     user.handler.login:
         class: Application\User\LoginHandler
         arguments:
-                  - '@user.repository.user'
+            - '@user.repository.user'
+            - '@user.encode_manager'
         tags:
             - { name: tactician.handler, command: Application\User\LoginCommand }
+
+    user.encode_manager:
+        class:   Domain\User\Encoder\PasswordEncoderInterface
+        factory: ['Infrastructure\UserBundle\Encoder\PasswordEncoder', encoder]
